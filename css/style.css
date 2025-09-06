@@ -74,6 +74,7 @@ body {
     position: fixed;
     z-index: 150;
     width: 100%;
+	background-color: black;
 }
 
 .link-item {
@@ -380,6 +381,7 @@ header {
     box-shadow: none;
 }
 /* end of contact */
+
 
 
 
