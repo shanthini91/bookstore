@@ -13,7 +13,19 @@ $(document).ready(function() {
         }
 
       });
+// Hamburger menu toggle
+  $(".hamburger-menu").click(function () {
+    $(this).toggleClass("change");
+    $(".bg-cover").toggleClass("change");
+    $(".nav-content").toggleClass("change");
+  });
 
+  // ✅ Close hamburger when clicking a menu link
+  $(".nav-content .link-item").click(function () {
+    $(".hamburger-menu").removeClass("change");
+    $(".bg-cover").removeClass("change");
+    $(".nav-content").removeClass("change");
+  });
       $('.writers-accordion').click(function(event) {
         
         if(event.target.id.split('-')[0] === 'button') {
@@ -23,6 +35,7 @@ $(document).ready(function() {
 
       });
 });
+
 
 
 
