@@ -83,6 +83,11 @@ body {
     z-index: 150;
 }
 
+
+.nav-content.show, /* Bootstrap adds .show when opened */
+.nav-content.change { /* Your JS toggles this */
+    display: block !important; /* Force visible */
+}
 .nav-content.change {
     opacity: 1;
     visibility: visible;
@@ -394,6 +399,7 @@ header {
     box-shadow: none;
 }
 /* end of contact */
+
 
 
 
