@@ -13,6 +13,9 @@ $(document).ready(function() {
         }
 
       });
+$('.link-item').click(function() {
+  $('.navigation').removeClass('change');
+});
 
       $('.writers-accordion').click(function(event) {
         
@@ -23,6 +26,7 @@ $(document).ready(function() {
 
       });
 });
+
 
 
 
