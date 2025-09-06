@@ -1,7 +1,17 @@
 body {
-    overflow-x: hidden;
+	max-width: 100% !important;
+    overflow-x: hidden !important;
 }
+@media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
 
+}
 /* navigation */
 .hamburger-menu {
     width: 65px;
@@ -83,7 +93,9 @@ body {
 /* header */
 header {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(../img/header-bg.jpeg) fixed center no-repeat /cover;
+		background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url('../img/headerbg.jpeg');
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
@@ -121,7 +133,7 @@ header {
     display: inline-block;
     font-size: 3rem;
     font-weight: 500;
-    text-shadow: 2px 2px 5px #aaa;
+    text-shadow: 2px 2px 5px #bb2124;
     transition: all .5s;
 }
 
@@ -134,11 +146,12 @@ header {
 
 .common-title:hover {
     transform: translate(-5px, -3px);
-    text-shadow: 2px 5px 20px #aaa;
+    text-shadow: 2px 5px 20px #bb2124;
 }
 /* end of common-title */
 
 /* gallery */
+
 .gallery-img {
     backface-visibility: hidden;
     transition: all .5s;
@@ -151,13 +164,13 @@ header {
 .first-row {
     transform: translateX(-300px);
     opacity: 0;
-    transition: all 2.5s;
+    transition: all 1.5s;
 }
 
 .second-row {
     transform: translateX(300px);
     opacity: 0;
-    transition: all 2.5s;
+    transition: all 1.5s;
 }
 
 .change .first-row, .change .second-row {
@@ -168,15 +181,23 @@ header {
 
 /* famous writers */
 .famous-writers {
-    background: linear-gradient(rgba(250, 250, 250, .8), rgba(250, 250, 250, .9)), url(../img/writers-bg.jpeg) fixed center no-repeat /cover;
+	background-image: 
+	linear-gradient(to right, rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)),
+	url('../img/writersbg.jpeg');
+	background-repeat: no-repeat;
+  background-size: cover; 
 }
 
 /* end of famous writers */
 
 /* suggested books */
 .suggested-books {
-    height: 100vh;
-    background: url(../img/wood-bg.jpeg) center no-repeat /cover;
+   
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)),
+	url(../img/woodbg.jpeg);
+	background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 .books {
@@ -293,11 +314,14 @@ header {
 
 /* contact */
 .contact {
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)), url(../img/header-bg.jpeg) fixed center no-repeat /cover;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9)), url(../img/headerbg.jpeg) fixed center no-repeat /cover;
 }
 
 .items-wrapper {
-    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), url(../img/items-wrapper-bg.jpg) center no-repeat /cover;
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .6)), 
+	url('../img/itemswrapperbg.jpg'); 
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
     border-radius: 5px;
 }
 
@@ -307,23 +331,23 @@ header {
 }
 
 .first-item {
-    animation: float 15s infinite;
+    animation: float 5s linear infinite;
 }
 
 .second-item {
-    animation: float 20s ease-in infinite;
+    animation: float 10s ease-in infinite;
 }
 
 .third-item {
-    animation: float 40s linear infinite;
+    animation: float 20s linear infinite;
 }
 
 .fourth-item {
-    animation: float 30s infinite;
+    animation: float 10s infinite;
 }
 
 .fifth-item {
-    animation: float 25s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -332,7 +356,7 @@ header {
     }
 
     50% {
-        transform: translateX(-60px);
+        transform: translateX(-23px);
     }
 
     100% {
