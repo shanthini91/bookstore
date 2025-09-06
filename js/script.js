@@ -13,24 +13,18 @@ $(document).ready(function() {
         }
 
       });
-// Hamburger menu toggle
-  $(".hamburger-menu").click(function () {
-    $(this).toggleClass("change");
-    $(".bg-cover").toggleClass("change");
-    $(".nav-content").toggleClass("change");
-  });
+ $(".hamburger-menu").click(function() {
+        $(this).toggleClass("change");
+        $(".bg-cover").toggleClass("change");
+        $(".nav-content").toggleClass("change");
+    });
 
-  // ✅ Close hamburger and menu on link click
-$(".nav-content .link-item").click(function () {
-  // Reset hamburger icon
-  $(".hamburger-menu").removeClass("change");
-
-  // Close overlay
-  $(".bg-cover").removeClass("change");
-
-  // Hide nav content
-  $(".nav-content").removeClass("change");
-});
+    // Close menu when any link is clicked
+    $(".nav-content .link-item").click(function() {
+        $(".hamburger-menu").removeClass("change");
+        $(".bg-cover").removeClass("change");
+        $(".nav-content").removeClass("change");
+    });
 
       $('.writers-accordion').click(function(event) {
         
@@ -41,6 +35,7 @@ $(".nav-content .link-item").click(function () {
 
       });
 });
+
 
 
 
