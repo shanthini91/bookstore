@@ -20,12 +20,18 @@ $(document).ready(function() {
     $(".nav-content").toggleClass("change");
   });
 
-  // ✅ Close hamburger when clicking a menu link
-  $(".nav-content .link-item").click(function () {
-    $(".hamburger-menu").removeClass("change");
-    $(".bg-cover").removeClass("change");
-    $(".nav-content").removeClass("change");
-  });
+  // ✅ Close hamburger and menu on link click
+$(".nav-content .link-item").click(function () {
+  // Reset hamburger icon
+  $(".hamburger-menu").removeClass("change");
+
+  // Close overlay
+  $(".bg-cover").removeClass("change");
+
+  // Hide nav content
+  $(".nav-content").removeClass("change");
+});
+
       $('.writers-accordion').click(function(event) {
         
         if(event.target.id.split('-')[0] === 'button') {
@@ -35,6 +41,7 @@ $(document).ready(function() {
 
       });
 });
+
 
 
 
