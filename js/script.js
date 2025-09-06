@@ -4,11 +4,13 @@ $(document).ready(function () {
   // =========================
   $(".hamburger-menu").click(function () {
     $(".navigation").toggleClass("change");
+    $(this).toggleClass("change"); // animate hamburger lines
   });
 
   // Close menu on nav link click
   $(".nav-link").click(function () {
     $(".navigation").removeClass("change");
+    $(".hamburger-menu").removeClass("change"); // reset icon
   });
 
   // Close menu when clicking outside nav (overlay area)
@@ -18,6 +20,7 @@ $(document).ready(function () {
       $(".navigation").hasClass("change")
     ) {
       $(".navigation").removeClass("change");
+      $(".hamburger-menu").removeClass("change"); // reset icon
     }
   });
 
