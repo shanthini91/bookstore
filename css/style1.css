@@ -66,6 +66,12 @@ body {
     transition: all .5s;
 }
 
+
+.navigation.change .bg-cover {
+  transform: scale(150); /* expands */
+  background: rgba(35, 37, 40, 0.9); /* keep semi-transparent */
+}
+
 .change .line1 {
     transform: rotate(-405deg) translate(-5px, 5px);
     background: #777;
@@ -401,6 +407,7 @@ header {
     box-shadow: none;
 }
 /* end of contact */
+
 
 
 
