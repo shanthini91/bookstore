@@ -12,7 +12,7 @@ body {
     }
 
 }
-/* navigation */
+/* Hamburger button */
 .hamburger-menu {
     width: 65px;
     height: 65px;
@@ -22,22 +22,35 @@ body {
     right: 30px;
     z-index: 200;
     border-radius: 50%;
-    outline: none!important;
-    transition: all .5s;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
-.line1, 
-.line2,
-.line3 {
+.line1, .line2, .line3 {
     width: 30px;
     height: 2px;
     background: #eee;
-    margin: 5px;
-    transition: all .5s;
+    margin: 5px auto;
+    transition: all 0.5s;
 }
 
+/* Icon change on open */
+.hamburger-menu.change .line1 {
+    transform: rotate(-405deg) translate(-5px, 5px);
+    background: #777;
+}
+.hamburger-menu.change .line2 {
+    opacity: 0;
+}
+.hamburger-menu.change .line3 {
+    transform: rotate(405deg) translate(-5px, -5px);
+    background: #777;
+}
+
+/* Overlay behind nav */
 .bg-cover {
-    background: rgba(35, 37, 40, .98);
+    background: rgba(35, 37, 40, 0.98);
     width: 55px;
     height: 55px;
     position: fixed;
@@ -45,50 +58,50 @@ body {
     right: 35px;
     z-index: 100;
     border-radius: 50%;
-    transition: all .5s;
+    transition: all 0.5s;
+    transform: scale(1);
 }
-
-.change .line1 {
-    transform: rotate(-405deg) translate(-5px, 5px);
-    background: #777;
-}
-
-.change .line2 {
-    opacity: 0;
-}
-
-.change .line3 {
-    transform: rotate(405deg) translate(-5px, -5px);
-    background: #777;
-}
-
-.change .hamburger-menu {
-    background: #eef0eb;
-}
-
-.change .bg-cover {
+.bg-cover.change {
     transform: scale(150);
 }
 
+/* Nav content */
 .nav-content {
     position: fixed;
-    z-index: 150;
+    top: 0;
+    left: 0;
     width: 100%;
-	background-color: black;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    z-index: 150;
 }
 
+.nav-content.change {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Links */
 .link-item {
-    font-size: 20px;
+    font-size: 24px;
     color: #eee;
-    border-bottom: 1px solid #eee;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .link-item:hover {
     color: #fff;
-    border-bottom: 1px solid #fff;
-    border-radius: 50% 50% 0 0;
-    background: rgba(0, 0, 0, .3);
+    text-decoration: underline;
 }
+
 /* end of navigation */
 
 /* header */
@@ -381,6 +394,7 @@ header {
     box-shadow: none;
 }
 /* end of contact */
+
 
 
 
